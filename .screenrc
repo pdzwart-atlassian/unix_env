@@ -1,0 +1,6 @@
+nethack on
+hardstatus alwayslastline "%{mk}%n %{gk}%h %{yk}%W"
+activity '%'
+msgminwait 1
+msgwait 2
+startup_message off

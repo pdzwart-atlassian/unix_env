@@ -1,0 +1,10 @@
+set ruler
+set number
+set list
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set showmatch
+colorscheme dezwart
+syntax on
