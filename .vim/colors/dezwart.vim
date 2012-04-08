@@ -10,22 +10,21 @@ if exists("syntax_on")
   syntax reset
 endif
 let g:colors_name = "dezwart"
-hi SpecialKey     cterm=bold  ctermfg=darkred
+hi SpecialKey     ctermfg=darkred
 hi NonText        ctermfg=darkred
-hi Directory      cterm=bold  ctermfg=brown
-hi ErrorMsg       cterm=bold  ctermfg=grey  ctermbg=red
+hi Directory      ctermfg=brown
+hi ErrorMsg       ctermfg=grey  ctermbg=red
 hi Search         ctermfg=white  ctermbg=red
-hi MoreMsg        cterm=bold  ctermfg=darkgreen
-hi ModeMsg        cterm=bold
-hi LineNr         ctermfg=darkgrey
-hi Question       cterm=bold  ctermfg=darkgreen
-hi StatusLine     cterm=bold ctermfg=lightblue ctermbg=white
+hi MoreMsg        ctermfg=darkgreen
+hi ModeMsg        cterm=reverse
+hi LineNr         ctermfg=darkred
+hi Question       ctermfg=darkgreen
+hi StatusLine     ctermfg=lightblue ctermbg=white
 hi StatusLineNC   ctermfg=white ctermbg=lightblue
 hi Title          ctermfg=darkmagenta
 hi Visual         cterm=reverse
-hi WarningMsg     cterm=bold  ctermfg=darkred
-hi Cursor         guibg=Green
-hi Comment        cterm=underline ctermfg=grey
+hi WarningMsg     ctermfg=darkred
+hi Comment        cterm=NONE ctermfg=NONE ctermbg=blue
 hi Constant       ctermfg=darkmagenta
 hi Special        ctermfg=yellow
 hi Identifier     ctermfg=darkcyan
@@ -37,8 +36,8 @@ hi Todo           ctermfg=black  ctermbg=darkcyan
 hi CursorLine     cterm=underline
 hi CursorColumn   cterm=underline
 hi MatchParen     ctermbg=darkgreen ctermfg=black
-hi TabLine        cterm=bold ctermfg=lightblue ctermbg=white
-hi TabLineFill    cterm=bold ctermfg=lightblue ctermbg=white
+hi TabLine        ctermfg=lightblue ctermbg=white
+hi TabLineFill    ctermfg=lightblue ctermbg=white
 hi TabLineSel     term=reverse  ctermfg=white ctermbg=lightblue
 hi link IncSearch       Visual
 hi link String          Constant
