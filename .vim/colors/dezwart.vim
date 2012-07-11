@@ -24,7 +24,7 @@ hi StatusLine     ctermfg=blue ctermbg=white
 hi StatusLineNC   ctermfg=NONE ctermbg=blue
 hi Comment        ctermfg=NONE ctermbg=blue
 
-hi Special        cterm=reverse
+hi Special        cterm=none
 hi Visual         cterm=reverse
 
 hi NonText        ctermfg=blue
