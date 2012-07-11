@@ -2,7 +2,7 @@
 " vim: tw=0 ts=4 sw=4
 " Vim color file
 " Maintainer:   Pete de Zwart <dezwart@gmail.org>
-" Last Change:  2012 Feb 14
+" Last Change:  2012-07-11
 
 hi clear
 set background=dark
@@ -10,35 +10,42 @@ if exists("syntax_on")
   syntax reset
 endif
 let g:colors_name = "dezwart"
-hi SpecialKey     ctermfg=darkred
-hi NonText        ctermfg=darkred
-hi Directory      ctermfg=brown
-hi ErrorMsg       ctermfg=grey  ctermbg=red
-hi Search         ctermfg=white  ctermbg=red
-hi MoreMsg        ctermfg=darkgreen
-hi ModeMsg        cterm=reverse
-hi LineNr         ctermfg=darkred
-hi Question       ctermfg=darkgreen
-hi StatusLine     ctermfg=lightblue ctermbg=white
-hi StatusLineNC   ctermfg=white ctermbg=lightblue
-hi Title          ctermfg=darkmagenta
+
+hi Directory      ctermfg=yellow ctermbg=red
+hi ErrorMsg       ctermfg=yellow ctermbg=red
+hi ModeMsg        ctermfg=yellow ctermbg=red
+hi Question       ctermfg=yellow ctermbg=red
+hi Title          ctermfg=yellow ctermbg=red
+hi WarningMsg     ctermfg=yellow ctermbg=red
+
+hi LineNr         ctermfg=cyan ctermbg=blue
+hi Search         ctermfg=NONE ctermbg=red
+hi StatusLine     ctermfg=blue ctermbg=white
+hi StatusLineNC   ctermfg=NONE ctermbg=blue
+hi Comment        ctermfg=NONE ctermbg=blue
+
+hi Special        cterm=reverse
 hi Visual         cterm=reverse
-hi WarningMsg     ctermfg=darkred
-hi Comment        cterm=NONE ctermfg=NONE ctermbg=blue
-hi Constant       ctermfg=darkmagenta
-hi Special        ctermfg=yellow
-hi Identifier     ctermfg=darkcyan
-hi Statement      ctermfg=darkyellow
-hi PreProc        ctermfg=darkgreen
-hi Type           cterm=underline ctermfg=darkgreen
-hi Error          ctermfg=darkcyan  ctermbg=black
-hi Todo           ctermfg=black  ctermbg=darkcyan
-hi CursorLine     cterm=underline
+
+hi NonText        ctermfg=blue
+hi Constant       ctermfg=magenta
+hi Identifier     ctermfg=cyan
+hi Statement      ctermfg=yellow
+hi PreProc        ctermfg=red
+hi Type           ctermfg=green
+hi Error          ctermfg=black ctermbg=cyan
+hi Todo           ctermfg=black ctermbg=red
+hi SpecialKey     ctermfg=red ctermbg=blue
+
+hi CursorLine    cterm=underline
 hi CursorColumn   cterm=underline
-hi MatchParen     ctermbg=darkgreen ctermfg=black
+hi ColorColumn    ctermbg=blue
+
+hi MatchParen     ctermbg=yellow ctermfg=black
 hi TabLine        ctermfg=lightblue ctermbg=white
 hi TabLineFill    ctermfg=lightblue ctermbg=white
 hi TabLineSel     term=reverse  ctermfg=white ctermbg=lightblue
+
 hi link IncSearch       Visual
 hi link String          Constant
 hi link Character       Constant
