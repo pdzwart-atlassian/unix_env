@@ -1,0 +1,13 @@
+# Default ignore all
+*
+
+# Whitelist tracked files
+!.bash_profile
+!.bashrc
+!.exrc
+!.git
+!.gitconfig
+!.gitignore
+!.multitailrc
+!.screenrc
+!.vim
