@@ -5,10 +5,10 @@
 !.bash_profile
 !.bashrc
 !.exrc
-!.gnupg
+!.gnupg/gpg.conf
 !.git
 !.gitconfig
 !.gitignore
 !.multitailrc
 !.screenrc
-!.vim
+!.vim/colors/dezwart.vim
