@@ -7,12 +7,12 @@ fi
 
 # User specific environment and startup programs
 
-path_munge() {
+path_push() {
     for arg in $*
     do
         if [ -d $arg ]
         then
-            PATH=$PATH:$arg
+            PATH=$arg:$PATH
         fi
     done
 }
@@ -21,8 +21,8 @@ OL=/opt/local
 OLB=$OL/bin
 OLS=$OL/sbin
 
-path_munge $HOME/bin $OLB $OLS
+path_push $HOME/bin $OLB $OLS
 
-export PATH path_munge
+export PATH path_push
 
 mesg n
