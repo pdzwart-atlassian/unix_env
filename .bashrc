@@ -35,5 +35,5 @@ if [ "$PS1" ]; then
 fi
 
 export EDITOR=vi
-export EMAIL=dezwart@gmail.com
+export EMAIL=pdzwart@atlassian.com
 export LESS="--LONG-PROMPT"
