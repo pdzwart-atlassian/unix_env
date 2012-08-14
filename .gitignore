@@ -4,7 +4,7 @@
 # Whitelist tracked files
 !.bash_profile
 !.bashrc
-!.exrc
+!.vimrc
 !.gnupg/gpg.conf
 !.git
 !.gitconfig
@@ -12,3 +12,4 @@
 !.multitailrc
 !.screenrc
 !.vim/colors/dezwart.vim
+!.vim/bundle/
