@@ -9,6 +9,7 @@
 !.git
 !.gitconfig
 !.gitignore
+!.hgrc
 !.multitailrc
 !.screenrc
 !.vim/colors/dezwart.vim

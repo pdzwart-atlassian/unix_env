@@ -3,4 +3,4 @@
 	url = git://github.com/tpope/vim-pathogen.git
 [submodule ".vim/bundle/vim-puppet"]
 	path = .vim/bundle/vim-puppet
-	url = git://github.com/rodjek/vim-puppet.git
+	url = git@github.com:pdzwart-atlassian/vim-puppet.git
