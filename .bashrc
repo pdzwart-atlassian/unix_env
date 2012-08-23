@@ -37,3 +37,9 @@ fi
 export EDITOR=vi
 export EMAIL=dezwart@gmail.com
 export LESS="--LONG-PROMPT"
+
+git_recapitate () {
+    local branch="${1:-master}"
+
+    git checkout -b recapitate && git checkout $branch && git merge recapitate && git push && git branch -d recapitate
+}
