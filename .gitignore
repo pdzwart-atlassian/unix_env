@@ -12,5 +12,9 @@
 !.hgrc
 !.multitailrc
 !.screenrc
+!.vim
+!.vim/colors
 !.vim/colors/dezwart.vim
-!.vim/bundle/
+!.vim/bundle
+!bin
+!bin/RBackup.sh
