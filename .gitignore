@@ -16,5 +16,8 @@
 !.vim/colors
 !.vim/colors/dezwart.vim
 !.vim/bundle
+!.vim/bundle/vim-pathogen
+!.vim/bundle/vim-puppet
+!.vim/bundle/vim-scala
 !bin
 !bin/RBackup.sh
