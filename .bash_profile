@@ -17,11 +17,10 @@ path_push() {
     done
 }
 
-OL=/opt/local
-OLB=$OL/bin
-OLS=$OL/sbin
+UL=/usr/local
+ULS=$UL/sbin
 
-path_push $HOME/bin $OLB $OLS
+path_push $HOME/bin $ULB $ULS
 
 export PATH path_push
 
