@@ -47,5 +47,9 @@ git_recapitate () {
 export http_proxy="http://proxy:3128/"
 
 d () {
-    echo $((($RANDOM % $1) + 1 + ${2:-0}))
+    local raw=$((($RANDOM % $1) + 1))
+    local modifier=${2:-0}
+    local modified=$(($raw + $modifier))
+
+    echo -e "$modified ($raw, $modifier)"
 }
