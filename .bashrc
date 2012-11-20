@@ -45,3 +45,7 @@ git_recapitate () {
 }
 
 export http_proxy="http://proxy:3128/"
+
+d () {
+    echo $((($RANDOM % $1) + 1))
+}
