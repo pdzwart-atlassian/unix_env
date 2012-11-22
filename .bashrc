@@ -43,3 +43,13 @@ git_recapitate () {
 
     git checkout -b recapitate && git checkout $branch && git merge recapitate && git push && git branch -d recapitate
 }
+
+export http_proxy="http://proxy:3128/"
+
+d () {
+    local raw=$((($RANDOM % $1) + 1))
+    local modifier=${2:-0}
+    local modified=$(($raw + $modifier))
+
+    echo -e "$modified ($raw, $modifier)"
+}
