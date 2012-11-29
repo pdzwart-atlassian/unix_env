@@ -1,3 +1,5 @@
 [user]
     name = Pete de Zwart
     email = pdzwart@atlassian.com
+[push]
+    default = simple
