@@ -53,3 +53,53 @@ d () {
 
     echo -e "$modified ($raw, $modifier)"
 }
+
+cvs_up () {
+    cvs update
+}
+
+svn_up () {
+    svn update
+}
+
+git_up () {
+    git pull && git submodule init && git submodule update
+}
+
+hg_up () {
+    hg pull && hg update
+}
+
+# Source Update
+supdate () {
+    local src_home="$HOME/Documents/Source"
+
+    pushd $src_home
+
+    for dir in *
+    do
+        pushd $dir
+
+        for vdir in cvs svn git hg
+        do
+            if [ -d $vdir ]
+            then
+                pushd $vdir
+
+                for sdir in *
+                do
+                    pushd $sdir
+
+                    echo -e "\nUPDATING ${src_home}/${dir}/${vdir}/${sdir}\n"
+                    ${vdir}_up
+
+                    popd
+                done
+
+                popd
+            fi
+        done
+
+        popd
+    done
+}
