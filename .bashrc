@@ -44,7 +44,7 @@ git_recapitate () {
     git checkout -b recapitate && git checkout $branch && git merge recapitate && git push && git branch -d recapitate
 }
 
-export http_proxy="http://proxy:3128/"
+export http_proxy="http://perf-proto-0:3128/"
 
 d () {
     local raw=$((($RANDOM % $1) + 1))
