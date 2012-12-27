@@ -19,5 +19,11 @@
 !.vim/bundle/vim-pathogen
 !.vim/bundle/vim-puppet
 !.vim/bundle/vim-scala
+!.sbt
+!.sbt/plugins
+!.sbt/plugins/build.sbt
+!.irssi
+!.irssi/config
+!.irssi/garden.theme
 !bin
 !bin/RBackup.sh

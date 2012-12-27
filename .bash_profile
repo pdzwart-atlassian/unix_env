@@ -25,4 +25,8 @@ path_push $HOME/bin $OLB $OLS
 
 export PATH path_push
 
-mesg n
+# If we have a terminal allocated, disable messaging
+if `tty -s`
+then
+    mesg n
+fi

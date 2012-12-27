@@ -2,4 +2,4 @@
     name = Pete de Zwart
     email = dezwart@gmail.com
 [push]
-    default = simple
+    default = matching
