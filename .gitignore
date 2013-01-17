@@ -22,6 +22,7 @@
 !.sbt
 !.sbt/plugins
 !.sbt/plugins/build.sbt
+!.sbt/plugins/plugins.sbt
 !.irssi
 !.irssi/config
 !.irssi/garden.theme
