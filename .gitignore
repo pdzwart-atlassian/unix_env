@@ -29,4 +29,5 @@
 !.irssi/garden.theme
 !bin
 !bin/RBackup.sh
+!bin/outofrange.scpt
 !.rspec
