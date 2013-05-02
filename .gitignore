@@ -18,6 +18,7 @@
 !.vim/bundle
 !.vim/bundle/vim-pathogen
 !.vim/bundle/vim-puppet
+!.vim/bundle/vim-gitgutter
 !.vim/bundle/vim-scala
 !.sbt
 !.sbt/plugins
@@ -28,4 +29,5 @@
 !.irssi/garden.theme
 !bin
 !bin/RBackup.sh
+!bin/outofrange.scpt
 !.rspec
