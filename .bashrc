@@ -118,7 +118,7 @@ gv2open () {
   local filename=$1
   shift
 
-  local png=`echo $filename | cut -d \. -f 1-1`
+  local png=`echo $filename | cut -d \. -f 1-1`.png
 
   gv2png $filename $png
 
