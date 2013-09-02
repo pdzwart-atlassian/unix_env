@@ -45,7 +45,12 @@ git_recapitate () {
   git checkout -b recapitate && git checkout $branch && git merge recapitate && git push && git branch -d recapitate
 }
 
-export http_proxy="http://proxy:3128/"
+host proxy &> /dev/null
+
+if [ $? -eq 0 ]
+then
+  export http_proxy="http://proxy:3128/"
+fi
 
 d () {
   local raw=$((($RANDOM % $1) + 1))
@@ -103,4 +108,24 @@ supdate () {
 
     popd
   done
+}
+
+gv2png () {
+  local gv=$1
+  shift
+  local png=$1
+  shift
+
+  dot -Tpng -o$png $gv
+}
+
+gv2open () {
+  local filename=$1
+  shift
+
+  local png=`echo $filename | cut -d \. -f 1-1`.png
+
+  gv2png $filename $png
+
+  open $png
 }
