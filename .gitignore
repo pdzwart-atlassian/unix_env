@@ -31,3 +31,4 @@
 !bin/RBackup.sh
 !bin/outofrange.scpt
 !.rspec
+!.puppet-lint.rc
