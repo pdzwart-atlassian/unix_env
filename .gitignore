@@ -33,3 +33,4 @@
 !bin/l4d2.sh
 !bin/outofrange.scpt
 !.rspec
+!.puppet-lint.rc
