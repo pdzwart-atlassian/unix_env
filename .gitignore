@@ -35,3 +35,4 @@
 !bin/md.sh
 !.rspec
 !.puppet-lint.rc
+!.tmux.conf
