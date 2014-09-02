@@ -38,6 +38,7 @@ export EDITOR=vi
 export EMAIL=pdzwart@atlassian.com
 export LESS="--LONG-PROMPT"
 export MAVEN_OPTS="-XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+DisableExplicitGC -XX:+UseParallelOldGC"
+export GIT_PAGER=""
 
 git_recapitate () {
   local branch="${1:-master}"
