@@ -103,6 +103,8 @@ supdate () {
 
     popd
   done
+
+  popd
 }
 
 gv2png () {
