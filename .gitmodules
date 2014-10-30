@@ -10,3 +10,6 @@
 [submodule ".vim/bundle/vim-gitgutter"]
 	path = .vim/bundle/vim-gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
+[submodule ".vim/bundle/vim-syntax-haskell-cabal"]
+	path = .vim/bundle/vim-syntax-haskell-cabal
+	url = https://github.com/Twinside/vim-syntax-haskell-cabal.git
