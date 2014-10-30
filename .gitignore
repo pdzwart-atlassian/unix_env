@@ -20,6 +20,7 @@
 !.vim/bundle/vim-puppet
 !.vim/bundle/vim-gitgutter
 !.vim/bundle/vim-scala
+!.vim/bundle/vim-syntax-haskell-cabal
 !.sbt
 !.sbt/plugins
 !.sbt/plugins/build.sbt
@@ -29,6 +30,7 @@
 !.irssi/garden.theme
 !bin
 !bin/RBackup.sh
+!bin/l4d2.sh
 !bin/outofrange.scpt
 !bin/md.sh
 !.rspec

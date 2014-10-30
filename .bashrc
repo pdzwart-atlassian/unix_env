@@ -48,9 +48,10 @@ git_recapitate () {
 
 proxy='proxy'
 host $proxy > /dev/null
+
 if [ $? -eq 0 ]
 then
-  export http_proxy="http://proxy:3128/"
+  export http_proxy="http://${proxy}:3128/"
 fi
 
 d () {
