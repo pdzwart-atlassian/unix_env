@@ -46,11 +46,12 @@ git_recapitate () {
   git checkout -b recapitate && git checkout $branch && git merge recapitate && git push && git branch -d recapitate
 }
 
-host proxy &> /dev/null
+proxy='proxy'
+host $proxy > /dev/null
 
 if [ $? -eq 0 ]
 then
-  export http_proxy="http://proxy:3128/"
+  export http_proxy="http://${proxy}:3128/"
 fi
 
 d () {
@@ -85,29 +86,35 @@ supdate () {
 
   for dir in *
   do
-    pushd $dir
+    if [ -d $dir ]
+    then
+      pushd $dir
 
-    for vdir in cvs svn git hg
-    do
-      if [ -d $vdir ]
-      then
-        pushd $vdir
+      for vdir in cvs svn git hg
+      do
+        if [ -d $vdir ]
+        then
+          pushd $vdir
 
-        for sdir in *
-        do
-          pushd $sdir
+          for sdir in *
+          do
+            if [ -d $sdir ]
+            then
+              pushd $sdir
 
-          echo -e "\nUPDATING ${src_home}/${dir}/${vdir}/${sdir}\n"
-          ${vdir}_up
+              echo -e "\nUPDATING ${src_home}/${dir}/${vdir}/${sdir}\n"
+              ${vdir}_up
+
+              popd
+            fi
+          done
 
           popd
-        done
+        fi
+      done
 
-        popd
-      fi
-    done
-
-    popd
+      popd
+    fi
   done
 
   popd
