@@ -70,6 +70,7 @@ cvs_up () {
 }
 
 svn_up () {
+  svn upgrade
   svn update
 }
 
