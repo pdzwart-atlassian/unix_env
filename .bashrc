@@ -1,3 +1,6 @@
+# vi mode
+set -o vi
+
 BASETITLE="\[\e]0;\u@\H `uname -m -r -s`\007\]"
 SCREEN_TITLE='\[\ek\h\e\\\]'
 ST=''
