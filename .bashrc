@@ -1,6 +1,13 @@
 # vi mode
 set -o vi
 
+# Load in secrets
+SECRETS=~/.bash_secrets
+if [ -f $SECRETS ]
+then
+  source $SECRETS
+fi
+
 BASETITLE="\[\e]0;\u@\H `uname -m -r -s`\007\]"
 SCREEN_TITLE='\[\ek\h\e\\\]'
 ST=''
