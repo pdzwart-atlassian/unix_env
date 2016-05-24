@@ -1,6 +1,13 @@
 # vi mode
 set -o vi
 
+# Load in secrets
+SECRETS=~/.bash_secrets
+if [ -f $SECRETS ]
+then
+  source $SECRETS
+fi
+
 BASETITLE="\[\e]0;\u@\H `uname -m -r -s`\007\]"
 SCREEN_TITLE='\[\ek\h\e\\\]'
 ST=''
@@ -42,6 +49,9 @@ export EMAIL=dezwart@gmail.com
 export LESS="--LONG-PROMPT"
 export MAVEN_OPTS="-XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+DisableExplicitGC -XX:+UseParallelOldGC"
 export GIT_PAGER=""
+export GOPATH="$HOME/Documents/Workspace/Go"
+export GOBIN="$GOPATH/bin"
+export PATH+=":$GOBIN"
 
 git_recapitate () {
   local branch="${1:-master}"
