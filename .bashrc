@@ -49,6 +49,9 @@ export EMAIL=pdzwart@atlassian.com
 export LESS="--LONG-PROMPT"
 export MAVEN_OPTS="-XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+DisableExplicitGC -XX:+UseParallelOldGC"
 export GIT_PAGER=""
+export GOPATH="$HOME/Documents/Workspace/Go"
+export GOBIN="$GOPATH/bin"
+export PATH+=":$GOBIN"
 
 git_recapitate () {
   local branch="${1:-master}"
