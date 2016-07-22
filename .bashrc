@@ -153,3 +153,7 @@ gv2open () {
 
   open $png
 }
+
+start_docker_daemon () {
+  bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'
+}
