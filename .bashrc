@@ -157,3 +157,13 @@ gv2open () {
 start_docker_daemon () {
   bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'
 }
+
+nuke_docker_from_orbit () {
+  echo "It's the only way to be sure..."
+
+  for i in `docker ps -aq`
+  do
+    echo -en "\tForcibly removed docker container: "
+    docker rm -f $i
+  done
+}
