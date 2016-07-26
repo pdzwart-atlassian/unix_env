@@ -164,6 +164,6 @@ nuke_docker_from_orbit () {
   for i in `docker ps -aq`
   do
     echo -en "\tForcibly removed docker container: "
-    docker rm -f $i
+    docker rm -vf $i
   done
 }
