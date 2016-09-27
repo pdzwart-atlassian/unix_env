@@ -153,3 +153,24 @@ gv2open () {
 
   open $png
 }
+
+start_docker_daemon () {
+  bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'
+}
+
+nuke_docker_from_orbit () {
+  echo "It's the only way to be sure..."
+
+  for i in `docker ps -aq`
+  do
+    echo -en "\tForcibly removed docker container: "
+    docker rm -vf $i
+  done
+}
+
+# Source local environment specific script
+LOCAL_ENV=~/.bash_local
+if [ -f $LOCAL_ENV ]
+then
+  source $LOCAL_ENV
+fi
