@@ -159,3 +159,10 @@ nuke_docker_from_orbit () {
     docker rm -vf $i
   done
 }
+
+# Source local environment specific script
+LOCAL_ENV=~/.bash_local
+if [ -f $LOCAL_ENV ]
+then
+  source $LOCAL_ENV
+fi
