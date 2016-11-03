@@ -159,13 +159,47 @@ start_docker_daemon () {
 }
 
 nuke_docker_from_orbit () {
-  echo "It's the only way to be sure..."
+  echo -e "It's the only way to be sure...\n"
 
-  for i in `docker ps -aq`
+  # Docker lacks a cascading delete, and occasionally throws a SEGV
+  let max=10
+  let count=0
+
+  clean=1
+
+  while [ $count -lt $max ]
   do
-    echo -en "\tForcibly removed docker container: "
-    docker rm -vf $i
+    unset i
+    unset j
+    let count++
+
+    echo "Forcibly removed docker containers:"
+    for i in `docker ps -aq`
+    do
+      docker rm -vf $i
+    done
+
+    echo "Forcibly removed docker images:"
+    for j in `docker images -qa`
+    do
+      docker rmi -f $j
+    done
+
+    if [ -z "$i" -a -z "$j" ]
+    then
+      clean=0
+      break
+    fi
   done
+
+  if [ $clean ]
+  then
+    echo "Light is green, trap is clean."
+    true
+  else
+    echo "Docker still dirty, escalated to meat space."
+    false
+  fi
 }
 
 # Source local environment specific script
