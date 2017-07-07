@@ -38,8 +38,17 @@ if [ "$PS1" ]; then
   C_BLUE='\[\e[34m\]'
   C_PURPLE='\[\e[35m\]'
   C_CYAN='\[\e[36m\]'
+  C_LIGHT_GRAY='\[\e[37m\]'
+  # These appear to be bold version of the normal colours
+  C_DARK_GRAY='\[\e[90m\]'
+  C_LIGHT_RED='\[\e[91m\]'
+  C_LIGHT_GREEN='\[\e[92m\]'
+  C_LIGHT_YELLOW='\[\e[93m\]'
+  C_LIGHT_BLUE='\[\e[94m\]'
+  C_LIGHT_MAGENTA='\[\e[95m\]'
+  C_LIGHT_CYAN='\[\e[96m\]'
 
-  PS1="${ST}${TITLEBAR}${C_GREEN}\u${C_RESET}@${C_YELLOW}\h${C_RESET}:${C_CYAN}\w${C_RESET}[${C_BLUE}\D{%Y-%m-%d %T %z}${C_RESET}](${C_RED}\j${C_RESET},${C_PURPLE}\$?${C_RESET})${C_YELLOW}\$${C_RESET} "
+  PS1="${ST}${TITLEBAR}${C_GREEN}\u${C_RESET}@${C_YELLOW}\h${C_RESET}:${C_CYAN}\w${C_RESET}[${C_LIGHT_GRAY}\D{%Y-%m-%d %T %z}${C_RESET}](${C_RED}\j${C_RESET},${C_PURPLE}\$?${C_RESET})${C_YELLOW}\$${C_RESET} "
 
   alias ls='ls -F'
 fi
