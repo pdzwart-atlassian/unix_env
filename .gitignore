@@ -36,3 +36,6 @@
 !.rspec
 !.puppet-lint.rc
 !.tmux.conf
+!.jupyter
+!.jupyter/custom
+!.jupyter/custom/custom.css
