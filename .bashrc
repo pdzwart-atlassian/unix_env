@@ -68,13 +68,13 @@ git_recapitate () {
   git checkout -b recapitate && git checkout $branch && git merge recapitate && git push && git branch -d recapitate
 }
 
-proxy='proxy'
-host $proxy > /dev/null
+#proxy='proxy'
+#host $proxy > /dev/null
 
-if [ $? -eq 0 ]
-then
-  export http_proxy="http://${proxy}:3128/"
-fi
+#if [ $? -eq 0 ]
+#then
+#  export http_proxy="http://${proxy}:3128/"
+#fi
 
 d () {
   local raw=$((($RANDOM % $1) + 1))
