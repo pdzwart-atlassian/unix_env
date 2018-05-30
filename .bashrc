@@ -56,7 +56,7 @@ fi
 export EDITOR=vi
 export EMAIL=dezwart@gmail.com
 export LESS="--LONG-PROMPT"
-export MAVEN_OPTS="-XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+DisableExplicitGC -XX:+UseParallelOldGC"
+#export MAVEN_OPTS="-XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+DisableExplicitGC -XX:+UseParallelOldGC"
 export GIT_PAGER=""
 export GOPATH="$HOME/Documents/Workspace/Go"
 export GOBIN="$GOPATH/bin"
@@ -67,14 +67,6 @@ git_recapitate () {
 
   git checkout -b recapitate && git checkout $branch && git merge recapitate && git push && git branch -d recapitate
 }
-
-proxy='proxy'
-host $proxy > /dev/null
-
-if [ $? -eq 0 ]
-then
-  export http_proxy="http://${proxy}:3128/"
-fi
 
 d () {
   local raw=$((($RANDOM % $1) + 1))
@@ -94,7 +86,7 @@ svn_up () {
 }
 
 git_up () {
-  git pull && git submodule init && git submodule update
+  git pull --all --prune && git gc --aggressive --prune && git submodule init && git submodule update
 }
 
 hg_up () {
