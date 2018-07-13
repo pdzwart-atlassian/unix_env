@@ -86,7 +86,7 @@ svn_up () {
 }
 
 git_up () {
-  git pull --all --prune && git gc --aggressive --prune && git submodule init && git submodule update
+  git pull --all && git submodule init && git submodule update
 }
 
 hg_up () {
