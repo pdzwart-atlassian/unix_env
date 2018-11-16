@@ -13,3 +13,6 @@
 [submodule ".vim/bundle/vim-syntax-haskell-cabal"]
 	path = .vim/bundle/vim-syntax-haskell-cabal
 	url = https://github.com/Twinside/vim-syntax-haskell-cabal.git
+[submodule ".vim/bundle/vim-go"]
+	path = .vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
