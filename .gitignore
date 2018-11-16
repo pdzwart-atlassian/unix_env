@@ -21,6 +21,7 @@
 !.vim/bundle/vim-gitgutter
 !.vim/bundle/vim-scala
 !.vim/bundle/vim-syntax-haskell-cabal
+!.vim/bundle/vim-go
 !.sbt
 !.sbt/plugins
 !.sbt/plugins/build.sbt
