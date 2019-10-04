@@ -86,7 +86,7 @@ svn_up () {
 }
 
 git_up () {
-  git pull --all && git submodule init && git submodule update
+  git stash && git checkout master && git pull --all && git submodule init && git submodule update
 }
 
 hg_up () {
