@@ -14,7 +14,7 @@ URxvt*skipScroll: true
 URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 URxvt*scrollBar_floating: false
-URxvt*fading: 30
+!URxvt*fading: 30
 URxvt*utmpInhibit: false
 URxvt*urgentOnBell: false
 URxvt*visualBell: true
