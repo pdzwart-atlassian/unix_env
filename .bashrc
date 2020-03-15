@@ -13,7 +13,7 @@ SCREEN_TITLE='\[\ek\h\e\\\]'
 ST=''
 
 case $TERM in
-  rxvt*)
+  *rxvt*)
     TITLEBAR=$BASETITLE
     ;;
   xterm*)
