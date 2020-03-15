@@ -13,7 +13,7 @@ SCREEN_TITLE='\[\ek\h\e\\\]'
 ST=''
 
 case $TERM in
-  rxvt*)
+  *rxvt*)
     TITLEBAR=$BASETITLE
     ;;
   xterm*)
@@ -86,7 +86,7 @@ svn_up () {
 }
 
 git_up () {
-  git pull --all && git submodule init && git submodule update
+  git stash && git checkout master && git pull --all && git submodule init && git submodule update
 }
 
 hg_up () {
