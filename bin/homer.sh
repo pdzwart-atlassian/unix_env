@@ -1,19 +1,23 @@
 #!/bin/bash
 
-declare -a lines
+homers_texts=~/share/odyssey.txt
 
-i=0
+dadadodo -c 1 -w 1048576 $homers_texts 2> /dev/null
 
-old_ifs="$IFS"
-IFS=$'\n'
+#declare -a lines
 
-for line in `cat ~/share/odyssey.txt`
-do
-    lines[$i]="$line"
-    let i+=1
-done
+#i=0
 
-index=$(($RANDOM*$RANDOM%$i))
-line="${lines[$index]}"
+#old_ifs="$IFS"
+#IFS=$'\n'
 
-echo "$line"
+#for line in `cat ~/share/odyssey.txt`
+#do
+#    lines[$i]="$line"
+#    let i+=1
+#done
+
+#index=$(($RANDOM*$RANDOM%$i))
+#line="${lines[$index]}"
+
+#echo "$line"

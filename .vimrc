@@ -12,6 +12,7 @@ set showmatch
 set laststatus=2
 set modeline
 set modelines=5
+set mouse-=a
 set statusline=%<%f%=\ [%M%n%R%H]\ %-19(%3l,%02c%03V%)\[0x%02O,%08o]\ \(0x%02B,%03b\)
 colorscheme dezwart
 syntax on
