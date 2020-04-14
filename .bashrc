@@ -62,6 +62,20 @@ export GOPATH="$HOME/Documents/Workspace/Go"
 export GOBIN="$GOPATH/bin"
 export PATH+=":$GOBIN"
 
+# Set up /opt specifics
+if [ -d /opt ]
+then
+    if [ -d /opt/lib ]
+    then
+        export LD_LIBRARY_PATH="/opt/lib"
+    fi
+
+    if [ -d /opt/bin ]
+    then
+        export PATH+=":/opt/bin"
+    fi
+fi
+
 git_recapitate () {
   local branch="${1:-master}"
 
