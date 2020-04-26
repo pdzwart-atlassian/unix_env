@@ -39,5 +39,5 @@ URxvt*perl-ext:
 URxvt*cursorColor: _chartreuse
 
 ! Bloody dark blue chromatic abberation, stupid eyeballs
-*color4: _blue_from_uranus
-*color12: _neon_blue
+*color4: _neon_blue
+*color12: _crayola_blue
