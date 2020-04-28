@@ -40,4 +40,10 @@
 !.jupyter
 !.jupyter/custom
 !.jupyter/custom/custom.css
+!bin/homer.sh
+!bin/homer_notify.sh
+!share
+!share/odyssey.txt
 !.Xresources
+!.abcde.conf
+!share/rime.txt

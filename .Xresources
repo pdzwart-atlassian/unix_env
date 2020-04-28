@@ -1,5 +1,10 @@
 #define _chartreuse #7fff00
 #define _orange     #ff7f00
+#define _neon_blue  #4d4dff
+#define _bleu_de_france #318ce7
+#define _crayola_blue   #1f75fe
+! Uranian blue
+#define _blue_from_uranus   #afdbf5
 
 !URxvt*termName: screen-256color
 URxvt*loginShell: true
@@ -32,3 +37,7 @@ URxvt*print-pipe: cat > $HOME/$(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
 URxvt*perl-ext-common:
 URxvt*perl-ext:
 URxvt*cursorColor: _chartreuse
+
+! Bloody dark blue chromatic abberation, stupid eyeballs
+*color4: _neon_blue
+*color12: _crayola_blue

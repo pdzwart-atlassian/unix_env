@@ -18,7 +18,7 @@ hi Question       ctermfg=yellow ctermbg=red
 hi Title          ctermfg=yellow ctermbg=red
 hi WarningMsg     ctermfg=yellow ctermbg=red
 
-hi LineNr         ctermfg=cyan ctermbg=blue
+hi LineNr         ctermfg=NONE ctermbg=blue
 hi Search         ctermfg=NONE ctermbg=red
 hi StatusLine     ctermfg=blue ctermbg=white
 hi StatusLineNC   ctermfg=NONE ctermbg=blue
