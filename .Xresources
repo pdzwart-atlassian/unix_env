@@ -37,6 +37,7 @@ URxvt*print-pipe: cat > $HOME/$(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
 URxvt*perl-ext-common:
 URxvt*perl-ext:
 URxvt*cursorColor: _chartreuse
+URxvt*cursorBlink: true
 
 ! Bloody dark blue chromatic abberation, stupid eyeballs
 *color4: _neon_blue
