@@ -170,10 +170,6 @@ gv2open () {
   open $png
 }
 
-start_docker_daemon () {
-  bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'
-}
-
 nuke_docker_from_orbit () {
   echo -e "It's the only way to be sure...\n"
 
