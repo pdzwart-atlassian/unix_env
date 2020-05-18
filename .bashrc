@@ -61,6 +61,7 @@ export GIT_PAGER=""
 export GOPATH="$HOME/Documents/Workspace/Go"
 export GOBIN="$GOPATH/bin"
 export PATH+=":$GOBIN"
+export QUOTING_STYLE=literal
 
 # Set up /opt specifics
 if [ -d /opt ]
