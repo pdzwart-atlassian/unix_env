@@ -62,6 +62,7 @@ export GOPATH="$HOME/Documents/Workspace/Go"
 export GOBIN="$GOPATH/bin"
 export PATH+=":$GOBIN"
 export QUOTING_STYLE=literal
+export GPG_TTY=$(tty)
 
 # Set up /opt specifics
 if [ -d /opt ]
