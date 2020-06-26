@@ -7,7 +7,7 @@ sleepy=1
 # Some time the random message is not a valid payload, CBFd fixing that so try again with exponential backoff
 while [ $count -lt $retries ]
 do
-    curl -X POST -H 'Content-type: application/json' --data '{"text":"> “'"`homer.sh`"'”\n'"${1}"'"}' $2
+    curl -s -S -f -X POST -H 'Content-type: application/json' --data '{"text":"> “'"`homer.sh`"'”\n'"${1}"'"}' $2
 
     if [ $? -eq 0 ]
     then
