@@ -136,6 +136,12 @@ supdate () {
               echo -e "\nUPDATING ${src_home}/${dir}/${vdir}/${sdir}\n"
               ${vdir}_up
 
+              if [ $? -ne 0 ]
+              then
+                echo "Error: Escalating to meatspace."
+                return $?
+              fi
+
               popd
             fi
           done
