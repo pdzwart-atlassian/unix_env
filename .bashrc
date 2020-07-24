@@ -113,48 +113,69 @@ hg_up () {
 supdate () {
   local src_home="$HOME/Documents/Source"
 
-  pushd $src_home
+  if [ -z "$YE_OLDE_DIR" ]
+  then
+    export YE_OLDE_DIR=$PWD
+  fi
 
-  for dir in *
+  if [ ${#DIRSTACK[*]} -eq 1 ]
+  then
+    for thing in $src_home/*/*/*
+    do
+      if [ ! -d "$thing" ]
+      then
+        echo "$thing is not a directory, skipping."
+      else
+        pushd -n $thing > /dev/null
+      fi
+    done
+  fi
+
+  while [ ${#DIRSTACK[*]} -gt 1 ]
   do
-    if [ -d $dir ]
+    if [ ! -z "${DIRSTACK[1]##$src_home*}" ]
     then
-      pushd $dir
+      echo "Next dir: ${DIRSTACK[1]} not under $src_home. Meat to fix."
+      return
+    fi
 
-      for vdir in cvs svn git hg
-      do
-        if [ -d $vdir ]
-        then
-          pushd $vdir
+    if [ ! -e "${DIRSTACK[1]}" ]
+    then
+      echo "Next dir: ${DIRSTACK[1]} no longer exists. Skipping."
+      popd +1 -n > /dev/null
+      continue
+    fi
 
-          for sdir in *
-          do
-            if [ -d $sdir ]
-            then
-              pushd $sdir
+    popd > /dev/null
+    echo -e "\nUPDATING $PWD\n"
 
-              echo -e "\nUPDATING ${src_home}/${dir}/${vdir}/${sdir}\n"
-              ${vdir}_up
+    # Could extract the vcs type from the path but CBFd
+    case $PWD in
+      */git/*)
+        git_up
+        ;;
+      */hg/*)
+        hg_up
+        ;;
+      */svn/*)
+        svn_up
+        ;;
+      *)
+        echo "Unknown VCS. Meat to fix."
+        return
+    esac
 
-              if [ $? -ne 0 ]
-              then
-                echo "Error: Escalating to meatspace."
-                return $?
-              fi
-
-              popd
-            fi
-          done
-
-          popd
-        fi
-      done
-
-      popd
+    if [ $? -ne 0 ]
+    then
+      # Have to push the dir back on the stack for continuation
+      pushd -n $PWD > /dev/null
+      echo "Error updating $PWD: Escalating to meatspace."
+      return
     fi
   done
 
-  popd
+  cd "$YE_OLDE_DIR"
+  unset YE_OLDE_DIR
 }
 
 gv2png () {
