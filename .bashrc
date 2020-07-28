@@ -79,7 +79,7 @@ then
 fi
 
 git_recapitate () {
-  local branch="${1:-master}"
+  local branch=`git_get_default_branch`
 
   git checkout -b recapitate && git checkout $branch && git merge recapitate && git push && git branch -d recapitate
 }
@@ -101,8 +101,12 @@ svn_up () {
   svn update
 }
 
+git_get_default_branch () {
+  git symbolic-ref refs/remotes/origin/HEAD | sed -e 's,^refs/remotes/origin/,,'
+}
+
 git_up () {
-  git stash && git checkout master && git pull --all && git submodule init && git submodule update
+  git stash && git checkout `git_get_default_branch` && git pull --all && git submodule init && git submodule update
 }
 
 hg_up () {
