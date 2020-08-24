@@ -5,7 +5,9 @@
 !.bash_profile
 !.bashrc
 !.vimrc
+!.gnupg
 !.gnupg/gpg.conf
+!.gnupg/gpg-agent.conf
 !.git
 !.gitconfig
 !.gitignore
